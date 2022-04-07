@@ -19,11 +19,10 @@
 		a {
 			padding: 5px 10px;
 			text-decoration: none;
-			border: 1px solid black;
 			color: #ffff;
 			&:hover {
 				color: lightblue;
-				font-size: larger;
+				background-color: #191919;
 			}
 		}
 	}

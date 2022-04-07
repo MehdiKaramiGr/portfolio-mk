@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Logo from "../Logo/Logo";
 import "./Header.scss";
 
-import { Link } from "react-router-dom";
 
 export default class Header extends Component {
 	render() {
@@ -12,10 +11,10 @@ export default class Header extends Component {
 				<nav>
 					<ul className="primary-navigation">
 						<li className="active">
-							<Link to="/home">Home</Link>
+							<a to="/home">Home</a>
 						</li>
 						<li>
-							<Link to="/about">About</Link>
+							<a to="/about">About</a>
 						</li>
 					</ul>
 				</nav>
