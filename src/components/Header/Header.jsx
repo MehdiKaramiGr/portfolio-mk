@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Logo from "../Logo/Logo";
 import "./Header.scss";
 
+
 export default class Header extends Component {
 	constructor() {
 		super();
@@ -18,15 +19,31 @@ export default class Header extends Component {
 	};
 	render() {
 		console.log(this.state.navBarToggle);
-		const theStyle = {transform: 'translateX(0%)'}
+		const transformedStyle = { transform: "translateX(0%)" };
+
 		return (
 			<header className="header">
-				<Logo className="logo" />
-				<button className="mobile-nav-toggle" onClick={this.handleClick}>
+				<Logo />
+				<button
+					className="mobile-nav-toggle"
+
+					aria-controls="primary-navigation"
+					aria-expanded={this.state.navBarToggle}
+					onClick={this.handleClick}
+				>
 					<span className="sr-only">Menu</span>
 				</button>
 				<nav>
-					<ul id="primary-navigation" style={this.state.navBarToggle?theStyle:null}>
+					<ul
+						id="primary-navigation"
+						data-visable={this.state.navBarToggle}
+						style={this.state.navBarToggle ? transformedStyle : null}
+					>
+						<li className="active">
+							<a href="#">
+								<span aria-hidden="true">00</span>Home
+							</a>
+						</li>
 						<li className="active">
 							<a href="#">
 								<span aria-hidden="true">01</span>Past Work

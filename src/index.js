@@ -3,14 +3,9 @@ import * as ReactDOMClient from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 
-
 const root = ReactDOMClient.createRoot(document.getElementById("root"));
 
-root.render(
-
-		<App />
-
-);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
