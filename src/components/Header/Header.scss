@@ -1,11 +1,13 @@
 .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 1.1em;
+	z-index: 100;
 	display: flex;
 	padding: 15px 0px;
-
 	align-items: center;
-	justify-content: space-between;
-
-	
+	justify-content: flex-end;
 }
 
 .mobile-nav-toggle {
@@ -24,15 +26,21 @@
 
 	li {
 		list-style-type: none;
-		
+
 		a {
 			padding: 5px 10px;
 			text-decoration: none;
 			color: #ffff;
+			user-select:none;
 			&:hover {
 				color: lightblue;
-				background-color: #19191981;
 				cursor: pointer;
+			}
+
+			&.active {
+				text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+					0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18,
+					0 0 75px #49ff18;
 			}
 			[aria-hidden="true"] {
 				font-weight: 700;
@@ -64,7 +72,7 @@
 		border: 0;
 		width: 2rem;
 		aspect-ratio: 1;
-		top: 2rem;
+		top: 2.7rem;
 		right: 2rem;
 		&:hover {
 			cursor: pointer;
@@ -76,21 +84,21 @@
 	}
 }
 
-@media (min-width: 35.625em) and (max-width:55em) {
+@media (min-width: 35.625em) and (max-width: 55em) {
 	#primary-navigation {
-		a{
-			span[aria-hidden="true"]{
+		a {
+			span[aria-hidden="true"] {
 				display: none;
 			}
 		}
 	}
 }
 
-@media (min-width: 35.625em){
+@media (min-width: 35.625em) {
 	#primary-navigation {
-		gap: clamp(1.5rem , 5vw , 3rem);
+		gap: clamp(1.5rem, 5vw, 3rem);
 		padding-block: 2rem;
-		padding-inline: clamp(3rem , 8vw , 10rem);
+		padding-inline: clamp(3rem, 8vw, 10rem);
 	}
 }
 
