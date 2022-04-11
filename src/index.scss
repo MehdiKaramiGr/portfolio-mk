@@ -1,4 +1,96 @@
-$light-text: #ffff;
+:root {
+	--dark-primary: #bb86fc;
+	--dark-primary-variant: #3700b3;
+	--dark-secondary: #03dac6;
+	--dark-background: #121212;
+	--dark-surface: #121212;
+	--dark-surface-dp01: hsl(0, 0%, 8%);
+
+	--dark-error: #cf6679;
+	--dark-on-primary: #000000;
+	--dark-on-secondary: #000000;
+	--dark-on-background: #ffffff;
+	--dark-on-surface: #ffffff;
+	--dark-on-error: #000000;
+
+	--dark-primary-rgb: 188, 136, 252;
+	--dark-primary-variant-rgb: 55, 0, 179;
+	--dark-secondary-rgb: 3, 218, 198;
+	--dark-background-rgb: 18, 18, 18;
+	--dark-surface-rgb: 18, 18, 18;
+	--dark-error-rgb: 207, 102, 121;
+	--dark-on-primary-rgb: 0, 0, 0;
+	--dark-on-secondary-rgb: r, 0, 0;
+	--dark-on-background-rgb: 255, 255, 255;
+	--dark-on-surface-rgb: 255, 255, 255;
+	--dark-on-error-rgb: 0, 0, 0;
+
+
+	--dark-primary-hsl: hsl(267, 95%, 76%);
+	--dark-primary-variant-hsl: hsl(258, 100%, 35%);
+	--dark-secondary-hsl: hsl(174, 97%, 43%);
+	--dark-background-hsl: hsl(0, 0%, 7%);
+	--dark-surface-hsl: hsl(0, 0%, 7%);
+	--dark-error-hsl: #cf6679;
+	--dark-on-primary-hsl: #000000;
+	--dark-on-secondary-hsl: #000000;
+	--dark-on-background-hsl: #ffffff;
+	--dark-on-surface-hsl: #ffffff;
+	--dark-on-error-hsl: #000000;
+
+
+	--d--2: clamp(1.00rem, calc(0.78rem + 0.31vw), 0.84rem);
+	--d--1: clamp(1.25rem, calc(0.97rem + 0.39vw), 1.05rem);
+	--d-0: clamp(1.31rem, calc(1.21rem + 0.49vw), 1.56rem);
+	--d-1: clamp(1.64rem, calc(1.52rem + 0.61vw), 1.95rem);
+	--d-2: clamp(2.05rem, calc(1.90rem + 0.76vw), 2.44rem);
+	--d-3: clamp(2.56rem, calc(2.37rem + 0.95vw), 3.05rem);
+	--d-4: clamp(3.20rem, calc(2.97rem + 1.19vw), 3.82rem);
+	--d-5: clamp(4.01rem, calc(3.71rem + 1.49vw), 4.77rem);
+
+
+	--sp-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
+	--sp-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
+	--sp-xs: clamp(1.00rem, calc(0.95rem + 0.24vw), 1.13rem);
+	--sp-s: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
+	--sp-m: clamp(2.00rem, calc(1.90rem + 0.49vw), 2.25rem);
+	--sp-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3.00rem);
+	--sp-xl: clamp(3.94rem, calc(3.72rem + 1.10vw), 4.50rem);
+	--sp-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem);
+	--sp-3xl: clamp(7.88rem, calc(7.44rem + 2.20vw), 9.00rem);
+  
+	/* One-up pairs */
+	--sp-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+	--sp-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+	--sp-xs-s: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+	--sp-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+	--sp-m-l: clamp(2.00rem, calc(1.61rem + 1.95vw), 3.00rem);
+	--sp-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.50rem);
+	--sp-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6.00rem);
+	--sp-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9.00rem);
+  
+	/* Custom pairs */
+	--sp-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem);
+
+}
+
+// @media (max-width: 570px) {
+// 	:root {
+// 		font-size: 16px;
+// 	}
+// }
+
+// @media (min-width: 570px) and (max-width: 880px) {
+// 	:root {
+// 		font-size: 16px;
+// 	}
+// }
+
+// @media (min-width: 880px) {
+// 	:root {
+// 		font-size: 18px;
+// 	}
+// }
 
 body {
 	margin: 0;
@@ -7,20 +99,14 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: $light-text;
+	color: var(--dark-on-background);
 	overflow-x: hidden;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
-}
-
-
-html{
+html {
 	scroll-behavior: smooth;
 }
 
-body{
-	background-color: #012934;
+body {
+	background-color: var(--dark-background);
 }

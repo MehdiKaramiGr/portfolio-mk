@@ -1,29 +1,25 @@
 import "./App.scss";
 import { useRef } from "react";
 
+import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
-import HomePage from "./components/Home/Home";
 import PastWork from "./components/PastWork/PastWork";
 
-
 function App() {
-
-	const homeRef = useRef();
+	const headerRef = useRef();
 	const pastWorkRef = useRef();
 
 	const navHeaderRefs = [
-		{ section: "Home", ref: homeRef},
-		{ section: "PastWork", ref: pastWorkRef},
+		{ section: "Home", ref: headerRef },
+		{ section: "PastWork", ref: pastWorkRef },
 	];
-	
+
 	return (
 		<div className="App">
-			<Header navHeaderRefs={navHeaderRefs} />
-			<HomePage passedRef={homeRef} />
-			<PastWork passedRef={pastWorkRef} />
-			<div className="testing">
-				test ...
-			</div>
+			<NavBar navHeaderRefs={navHeaderRefs} />
+			<Header propRef={headerRef} />
+			<PastWork propRef={pastWorkRef} />
+			<div className="testing">test ...</div>
 		</div>
 	);
 }
