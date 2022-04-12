@@ -1,0 +1,86 @@
+// .btn {
+// 	//font-family: 'Roboto', sans-serif;
+// 	&.contained {
+// 		// ?
+// 		position: relative;
+
+// 		outline: 0;
+// 		border: 0;
+// 		overflow: hidden;
+
+// 		font-size: var(--d--1);
+// 		font-weight: 500;
+// 		color: var(--on-primary);
+// 		background-color: var(--primary);
+// 		border-radius: 0.25rem;
+
+// 		padding-inline: 2rem;
+// 		padding-block: 1rem;
+
+// 		margin-inline: var(--sp-3xs);
+// 		margin-block: var(--sp-2xs);
+
+// 		transition: background 400ms;
+// 		cursor: pointer;
+
+// 		&:hover {
+// 			//background-color: var(--primary--dp01);
+// 		}
+// 		&:active {
+// 			//background-color: var(--primary-dp01);
+// 		}
+// 		&:focus {
+// 		}
+// 	}
+// }
+
+// .ripple {
+// 	position: absolute; /* The absolute position we mentioned earlier */
+// 	border-radius: 50%;
+// 	transform: scale(0);
+// 	animation: ripple 600ms linear;
+// 	background-color: rgba(255, 255, 255, 0.7);
+// }
+
+// @keyframes ripple {
+// 	to {
+// 		transform: scale(4);
+// 		opacity: 0;
+// 	}
+// }
+
+
+
+button {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: background 400ms;
+    color: #fff;
+    background-color: #6200ee;
+    padding: 1rem 2rem;
+    //font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    outline: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+
+  span.ripple {
+    position: absolute; /* The absolute position we mentioned earlier */
+   // z-index: 2;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(0, 255, 255, 0.7);
+  }
+
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }

@@ -1,9 +1,9 @@
 .home-landing {
+
 	height: min(100vh, 1080px);
 
 	text-align: center;
 
-	margin: auto;
 	background-image: url(../../assets/IMG_0070.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -20,7 +20,6 @@
 		h1 {
 			font-size: var(--d-3);
 			letter-spacing: -1px;
-			//white-space: nowrap;
 		}
 		h3 {
 			font-weight: 300;
@@ -34,8 +33,7 @@
 		padding-inline: 0 !important;
 	}
 	h3 {
-		padding-inline: 0;
-		//color: pink;
+		padding-inline: 0 !important;
 		backdrop-filter: blur(2rem);
 	}
 }

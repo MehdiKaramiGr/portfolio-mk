@@ -28,24 +28,28 @@
 		list-style-type: none;
 
 		a {
-			color: rgba(var(--dark-on-background-rgb) , 1);
+			color: var(--on-background);
 			padding: 5px 10px;
 			text-decoration: none;	
 			user-select: none;
+
+			border-radius: 5px;
+
 			background-size: 0% 3px;
 			background-image: linear-gradient(
 				90deg,
-				rgba(var(--dark-primary-rgb), 1) 0%,
-				rgba(var(--dark-secondary-rgb),1) 100%
+				rgba(var(--primary-rgb), 1) 0%,
+				rgba(var(--secondary-rgb),0.71) 100%
 			);
 			background-repeat: no-repeat;
 			background-position: left bottom;
 			transition: background-size 300ms ease;
 			
 			&:hover {
-				color: var(--dark-secondary);
+				color: var(--secondary);
 				cursor: pointer;
 			}
+			
 
 			&.active {
 
