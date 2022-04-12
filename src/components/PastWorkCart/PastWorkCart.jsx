@@ -16,8 +16,8 @@ export default function PastWorkCart(props) {
 			</p>
 			<div className="redirectButtons">
 
-			<CustomeButton />
-			<CustomeButton />
+			<CustomeButton url="pornHub" larg />
+			<CustomeButton small />
 			</div>
 		</div>
 	);

@@ -49,38 +49,99 @@
 // 	}
 // }
 
+.btn {
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+
+	box-sizing: border-box;
+
+	min-width: 64px;
+
+	margin: 0;
+
+	padding: 8px 22px;
+	//    padding: 5px 15px;
+
+	border: 1px solid;
+	// border-color: ;
+
+	font-weight: 650;
+	font-size: 0.9375rem;
+	line-height: 1.75;
+	letter-spacing: 0;
+	line-height: 1.75;
+
+	text-transform: uppercase;
+
+	user-select: none;
+
+	//	text-rendering: auto;
+
+	&.larg {
+		font-size: 1rem;
+		padding-inline: 1rem;
+		padding-block: 0.875rem;
+	}
+
+	&.small {
+		padding-block: 4px !important;
+		padding-inline: 6px;
+		margin-inline-end: -8px;
+
+		font-size: 0.8125rem;
+		letter-spacing: 0;
 
 
-button {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    transition: background 400ms;
-    color: #fff;
-    background-color: #6200ee;
-    padding: 1rem 2rem;
-    //font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    outline: 0;
-    border: 0;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
+	}
 
+	.endIcon {
+		color: #b2bac2;
+		display: "inline-block";
+		margin-right: 10;
+		position: "absolute";
+		right: 0;
+	}
+	.startIcon {
+		color: #b2bac2;
+	}
+	&.contained {
+		position: relative;
+		overflow: hidden;
+		transition: background 400ms;
+		color: var(--surface-dp01);
+		background-color: var(--primary);
 
-  span.ripple {
-    position: absolute; /* The absolute position we mentioned earlier */
-   // z-index: 2;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 600ms linear;
-    background-color: rgba(0, 255, 255, 0.7);
-  }
+		//margin-inline: var(--sp-3xs);
+		//margin-block: var(--sp-2xs);
+		//font-family: 'Roboto', sans-serif;
 
-  @keyframes ripple {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
-  }
+		outline: 0;
+		border: 0;
+
+		border-radius: 0.25rem;
+		//box-shadow: 0 1 0.5rem rgba(256, 256, 256, 0.3);
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--primary--dp005);
+		}
+	}
+}
+
+span.ripple {
+	position: absolute; /* The absolute position we mentioned earlier */
+	// z-index: 2;
+	border-radius: 50%;
+	transform: scale(0);
+	animation: ripple 600ms linear;
+	background-color: var(--primary-dp01);
+	opacity: 0.6;
+}
+
+@keyframes ripple {
+	to {
+		transform: scale(4);
+		opacity: 0;
+	}
+}

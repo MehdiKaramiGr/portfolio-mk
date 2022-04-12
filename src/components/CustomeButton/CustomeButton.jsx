@@ -1,7 +1,7 @@
-import { React, useRef, useState, useEffect } from "react";
+import { React, useRef, useState } from "react";
 
 import "./CustomeButton.scss";
-export default function CustomeButton() {
+export default function CustomeButton({url , icon , larg,small , ...otherButtonProps}) {
 	const btnRef = useRef();
 	const [clicked, setClicked] = useState(false);
 	const [rippleStyle, setRippleStyle] = useState();
@@ -17,10 +17,6 @@ export default function CustomeButton() {
 	};
 
 	const handleClick = (e) => {
-		if(btnRef.current.className.includes("clicked")){
-            console.log("this2")
-		     setClicked(false)
-		 }
 		const { diameter, rippleTop, rippleLeft } = createRippleDim(
 			btnRef.current,
 			e
@@ -33,34 +29,22 @@ export default function CustomeButton() {
 		});
 
 		setClicked(true);
-		let timer1 = setTimeout(() => setClicked(false), 600);
+		let timer1 = setTimeout(() => {
+			setClicked(false);
+			clearInterval(timer1);
+		}, 605);
 	};
 
-	useEffect(() => {
-		console.log("render");
-	}, [rippleStyle]);
+	//useEffect(() => {}, [rippleStyle]);
 
-	// useEffect(() => {
-	// 	btnRef.current.addEventListener("click", (e) => {
-	//         console.log("this")
-	// 		handleClick(e);
-	// 	});
-
-	// 	return () => {
-	// 		btnRef.current.removeEventListener("click", (e) => {
-	//         console.log("removed")
-
-	// 			handleClick(e);
-	// 		});
-	// 	};
-	// }, [clicked, rippleStyle]);
 	return (
 		<button
-			className={`btn contained ${clicked ? "clicked" : ""}`}
+			className={`btn contained ${clicked ? "clicked" : ""}${larg? " larg": ""}${small? " small" : ""}`}
 			ref={btnRef}
 			onClick={(e) => handleClick(e)}
 		>
 			BUTTON
+            {}
 			{clicked ? <span className="ripple" style={rippleStyle}></span> : null}
 		</button>
 	);
