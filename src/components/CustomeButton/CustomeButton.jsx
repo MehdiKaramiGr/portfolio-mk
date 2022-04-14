@@ -1,7 +1,7 @@
 import { React, useRef, useState } from "react";
 
 import "./CustomeButton.scss";
-export default function CustomeButton({url , icon , larg,small , ...otherButtonProps}) {
+export default function CustomeButton({url,children,cName='' , ...otherButtonProps}) {
 	const btnRef = useRef();
 	const [clicked, setClicked] = useState(false);
 	const [rippleStyle, setRippleStyle] = useState();
@@ -39,12 +39,12 @@ export default function CustomeButton({url , icon , larg,small , ...otherButtonP
 
 	return (
 		<button
-			className={`btn contained ${clicked ? "clicked" : ""}${larg? " larg": ""}${small? " small" : ""}`}
+			className={`btn ${cName}`}
 			ref={btnRef}
 			onClick={(e) => handleClick(e)}
 		>
-			BUTTON
-            {}
+            {children}
+			
 			{clicked ? <span className="ripple" style={rippleStyle}></span> : null}
 		</button>
 	);

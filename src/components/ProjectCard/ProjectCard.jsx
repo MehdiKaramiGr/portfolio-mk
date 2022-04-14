@@ -2,11 +2,13 @@ import React from "react";
 
 import CustomeButton from "../CustomeButton/CustomeButton";
 
-import "./PastWorkCart.scss";
+import GitLogo from "../../assets/git-logo";
 
-export default function PastWorkCart(props) {
+import "./ProjectCard.scss";
+
+export default function ProjectCard(props) {
 	return (
-		<div className="cards">
+		<div className="project-card">
 			<img src={props.ImgUrl}></img>
 			<p>
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
@@ -15,9 +17,14 @@ export default function PastWorkCart(props) {
 				minima laboriosam?
 			</p>
 			<div className="redirectButtons">
+				<CustomeButton cName="contained">
+					<GitLogo styleClass="startIcon" />
+					GitHub
+				</CustomeButton>
 
-			<CustomeButton url="pornHub" larg />
-			<CustomeButton small />
+				<CustomeButton cName="outlined">
+					Live Demo
+				</CustomeButton>
 			</div>
 		</div>
 	);

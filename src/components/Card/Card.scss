@@ -1,0 +1,20 @@
+
+.card {
+	min-width: 240px;
+	// height: 260px;
+	background-color: var(--surface-dp02);
+    color: var(--on-surface);
+
+    border-radius: 8px;
+    
+    padding-inline: var(--sp-xs);
+    padding-block: var(--sp-xs);
+
+    //box-shadow: 11px 10px 13px -9px hsla(0, 0%, 7%, 1);
+    box-shadow: 11px 10px 13px -9px hsla(0, 0%, 4%, 1);
+    
+    .subtitle{
+        font-size: 0.7rem;
+    }
+
+}

@@ -73,7 +73,7 @@ const NavBar = (props) => {
 	//hidding styles
 	const transformedStyle = { transform: "translateX(0%)" };
 	const hiddenLogoStyle = { transform: "translateX(-200%)" };
-
+	
 	return (
 		<header className="NavBar" ref={navRef}>
 			<Logo style={logoVisibility ? null : hiddenLogoStyle} />
@@ -103,17 +103,26 @@ const NavBar = (props) => {
 					</li>
 					<li>
 						<a
-							href="#PastWork"
+							href="#Projects"
 							className={`nav-link ${
-								visibleSection === "PastWork" ? "active" : ""
+								visibleSection === "Projects" ? "active" : ""
 							}`}
 						>
 							<span aria-hidden="true">01</span>Past Works
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#Skills" className={`nav-link ${
+								visibleSection === "Skills" ? "active" : ""
+							}`}>
 							<span aria-hidden="true">02</span>Skills
+						</a>
+					</li>
+					<li>
+						<a href="#Hire" className={`nav-link ${
+								visibleSection === "Hire" ? "active" : ""
+							}`}>
+							<span aria-hidden="true">03</span>Hire Me
 						</a>
 					</li>
 				</ul>

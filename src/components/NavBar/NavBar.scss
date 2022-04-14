@@ -63,13 +63,13 @@
 	}
 }
 
-@media (max-width: 35.625em) {
+@media (max-width: 43em) {
 	#primary-navigation {
 		z-index: 1000;
 		position: fixed;
 		inset: 0 0 0 30%;
 		flex-direction: column;
-		padding: min(30vh, 10rem) 2rem;
+		padding: min(30vh, 10rem) 1.5rem;
 		transform: translateX(100%);
 		transition: transform ease-out 0.35s;
 	}
@@ -111,7 +111,7 @@
 	#primary-navigation {
 		gap: clamp(1.5rem, 5vw, 3rem);
 		padding-block: 2rem;
-		padding-inline: clamp(3rem, 8vw, 10rem);
+		padding-inline: clamp(2rem, 5vw, 10rem);
 	}
 }
 

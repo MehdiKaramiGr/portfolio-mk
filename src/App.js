@@ -3,23 +3,30 @@ import { useRef } from "react";
 
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
-import PastWork from "./components/PastWork/PastWork";
+import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
+import Hire from "./components/Hire/Hire";
 
 function App() {
 	const headerRef = useRef();
-	const pastWorkRef = useRef();
+	const ProjectsRef = useRef();
+	const skillsRef = useRef();
+	const hireRef = useRef()
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
-		{ section: "PastWork", ref: pastWorkRef },
+		{ section: "Projects", ref: ProjectsRef },
+		{ section: "Skills", ref: skillsRef },
+		{ section: "Hire", ref: hireRef }
 	];
 
 	return (
 		<div className="App">
 			<NavBar navHeaderRefs={navHeaderRefs} />
 			<Header propRef={headerRef} />
-			<PastWork propRef={pastWorkRef} />
-			<div className="testing">test ...</div>
+			<Projects propRef={ProjectsRef} />
+			<Skills propRef={skillsRef} />
+			<Hire propRef={hireRef} />
 		</div>
 	);
 }

@@ -1,0 +1,51 @@
+.project-card {
+    background-color: var(--surface-dp02);
+
+    color: var(--on-surface);
+
+    border-radius: 8px;
+    box-shadow: 11px 10px 13px -9px hsla(0, 0%, 4%, 1);
+
+
+    padding-inline: var(--sp-2xs);
+    padding-block: var(--sp-2xs);
+
+    //margin-inline: auto;
+
+    img {
+        width: 100%;
+    }
+    h4 {
+        margin-block: var(--sp-l);
+    }
+    p {
+        font-size: var(--d--2);
+    }
+
+    .redirectButtons{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-items: stretch;
+
+        
+        //flex-shrink: 1;
+        @media(max-width: 420px){
+            display: flex;
+            flex-direction: column;
+            height: 7rem;
+            gap: 0.4em;
+            .btn{
+                height: 2.5rem;
+            }
+
+
+        }
+        gap:1em;
+        height: var(--sp-l);
+        .btn{
+            min-width: 113.3px;
+        }
+    }
+}
