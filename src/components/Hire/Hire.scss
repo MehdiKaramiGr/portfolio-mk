@@ -1,11 +1,39 @@
 #Hire {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	height: 100vh;
 	background-color: var(--surface);
-	margin-block: 5rem;
+	padding-block: 15rem;
+
+	gap: 2rem;
 	
 }
 
 .hire-banner{
+	h2{
+		font-size: var(--d-3);
+	}
+	p{
+		font-size: var(--d--1);
+		font: 300;
+	}
 	text-align: center;
+	max-width: 46rem;
+
+	.contact-info{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.btn{
+			max-width:20rem;
+
+		}
+	}
 
 }
+email-link{
+		color: var(--primary);
+		
+	}
+

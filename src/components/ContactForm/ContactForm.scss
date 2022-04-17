@@ -1,0 +1,12 @@
+input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+  }
+  textarea{
+    resize: none;
+
+  }
+
+.form-input-container.textarea{
+  height: 8rem;
+}

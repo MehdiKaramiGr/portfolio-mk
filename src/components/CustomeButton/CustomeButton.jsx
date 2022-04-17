@@ -1,7 +1,13 @@
 import { React, useRef, useState } from "react";
 
 import "./CustomeButton.scss";
-export default function CustomeButton({url,children,cName='' , ...otherButtonProps}) {
+export default function CustomeButton({
+	url,
+	children,
+	propHandleClick,
+	cName = "",
+	...otherButtonProps
+}) {
 	const btnRef = useRef();
 	const [clicked, setClicked] = useState(false);
 	const [rippleStyle, setRippleStyle] = useState();
@@ -33,6 +39,7 @@ export default function CustomeButton({url,children,cName='' , ...otherButtonPro
 			setClicked(false);
 			clearInterval(timer1);
 		}, 605);
+		
 	};
 
 	//useEffect(() => {}, [rippleStyle]);
@@ -43,8 +50,8 @@ export default function CustomeButton({url,children,cName='' , ...otherButtonPro
 			ref={btnRef}
 			onClick={(e) => handleClick(e)}
 		>
-            {children}
-			
+			{children}
+
 			{clicked ? <span className="ripple" style={rippleStyle}></span> : null}
 		</button>
 	);

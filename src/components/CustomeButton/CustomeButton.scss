@@ -1,53 +1,3 @@
-// .btn {
-// 	//font-family: 'Roboto', sans-serif;
-// 	&.contained {
-// 		// ?
-// 		position: relative;
-
-// 		outline: 0;
-// 		border: 0;
-// 		overflow: hidden;
-
-// 		font-size: var(--d--1);
-// 		font-weight: 500;
-// 		color: var(--on-primary);
-// 		background-color: var(--primary);
-// 		border-radius: 0.25rem;
-
-// 		padding-inline: 2rem;
-// 		padding-block: 1rem;
-
-// 		margin-inline: var(--sp-3xs);
-// 		margin-block: var(--sp-2xs);
-
-// 		transition: background 400ms;
-// 		cursor: pointer;
-
-// 		&:hover {
-// 			//background-color: var(--primary--dp01);
-// 		}
-// 		&:active {
-// 			//background-color: var(--primary-dp01);
-// 		}
-// 		&:focus {
-// 		}
-// 	}
-// }
-
-// .ripple {
-// 	position: absolute; /* The absolute position we mentioned earlier */
-// 	border-radius: 50%;
-// 	transform: scale(0);
-// 	animation: ripple 600ms linear;
-// 	background-color: rgba(255, 255, 255, 0.7);
-// }
-
-// @keyframes ripple {
-// 	to {
-// 		transform: scale(4);
-// 		opacity: 0;
-// 	}
-// }
 
 .btn {
 	
@@ -71,25 +21,58 @@
 	
 	border: 1px solid;
 	border-radius: 0.25rem;
-	border-color: var(--primary);
-
+	border-color: transparent;
+	background-color: transparent;
+	
+	color: var(--primary);
+	
+	
 	font-weight: 650;
 	font-size: 0.9375rem;
 	line-height: 1.75;
 	line-height: 1.75;
 	letter-spacing: 0;
-
+	
 	text-transform: uppercase;
-
+	
 	user-select: none;
-
+	
 	text-rendering: auto;
+
+	transition: font-size 0.2s;
+
+
+	a{
+		text-decoration: none;
+		color: var(--primary);
+
+		
+	}
+	
+	&.hover:hover {
+		font-size: 1em;
+		//transform: scale(1.1);
+		cursor: pointer;
+	}
+	
+	span.ripple {
+		
+		position: absolute; /* The absolute position we mentioned earlier */
+		// z-index: 2;
+		border-radius: 50%;
+		transform: scale(0);
+		animation: ripple 600ms linear;
+		background-color: var(--primary-dp01);
+		opacity: 0.5;
+	}
+
+
 
 	&.larg {
 		font-size: 1rem;
 		font-weight: 700;
 		letter-spacing: 0;
-
+		
 		padding-inline: 1rem !important;
 		padding-block: 0.875rem !important;
 	}
@@ -98,31 +81,31 @@
 		padding-inline: 6px !important;
 		padding-block: 4px !important;
 		margin-inline-end: -8px;
-
+		
 		font-size: 0.8125rem;
 		letter-spacing: 0;
 	}
-
+	
 	.startIcon {
 		color: #b2bac2;
 		padding-inline-end: 0.3rem;
 		width: 1.5em;
 		min-width: 24px;
 	}
-
+	
 	&.contained {
 		color: var(--surface-dp01);
 		background-color: var(--primary);
-
+		
 		outline: 0;
 		border: 0;
-
+		
 		//box-shadow: 0 1 0.5rem rgba(256, 256, 256, 0.3);
 		cursor: pointer;
 		&:hover {
 			background-color: var(--primary--dp005);
 		}
-
+		
 		span.ripple {
 			
 			position: absolute; /* The absolute position we mentioned earlier */
@@ -135,7 +118,8 @@
 		}
 	}
 	&.outlined{
-		background-color: transparent ;
+		
+		border-color: var(--primary);
 		// background-color: var(--primary) ;
 		color:var(--primary);
 		cursor: pointer;
@@ -162,6 +146,8 @@
 		}
 		
 	}
+
+	
 
 }
 
