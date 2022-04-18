@@ -5,7 +5,7 @@
 
 	margin-block: 1rem;
 
-	width: 18rem;
+	width: 30rem;
 	height: 3.5rem;
 
 	border-radius: 5px 5px 0 0;
@@ -50,7 +50,7 @@
 .label-name {
 	position: absolute;
 	transform: translate(1rem, 80%);
-	color: var(--primary-dp01);
+	color: var(--on-surface);
 	transition: all 0.3s ease;
 }
 
@@ -68,9 +68,10 @@
 	position: absolute;
 
 	box-sizing: border-box;
-    &:hover , &:focus{
-        background-color: var(--surface-dp02);
-    }
+	&:hover,
+	&:focus {
+		background-color: var(--surface-dp02);
+	}
 
 	&:focus,
 	&.filled {
@@ -102,4 +103,16 @@
 			}
 		}
 	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-transition-delay: 99999s;
 }

@@ -12,12 +12,14 @@ function App() {
 	const ProjectsRef = useRef();
 	const skillsRef = useRef();
 	const hireRef = useRef()
+	const footerRef = useRef
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
 		{ section: "Projects", ref: ProjectsRef },
 		{ section: "Skills", ref: skillsRef },
-		{ section: "Hire", ref: hireRef }
+		{ section: "Hire", ref: hireRef },
+		{Selection:"footer" , ref: footerRef}
 	];
 
 	return (

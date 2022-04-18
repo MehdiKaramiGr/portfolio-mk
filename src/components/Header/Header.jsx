@@ -12,7 +12,7 @@ export default function Header(props) {
 					responsive and elegant websites for small businesses. While I'm based in
 					Tehran, Iran, I help build websites for people from pole to pole.
 				</h3>
-
+				<hr/>
 			</div>
 		</header>
 	);

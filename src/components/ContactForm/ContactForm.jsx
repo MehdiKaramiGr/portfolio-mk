@@ -17,8 +17,17 @@ export default function ContactForm() {
 		description: "",
 	});
 
+	const [submit, updateSubmit] = useState({
+		loading: false,
+		result: "",
+	});
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		updateSubmit({
+			loading: true,
+			result: "",
+		});
 		try {
 			const { name, email, company, description } = formData;
 			const docRef = await addDoc(collection(db, "submitForm"), {
@@ -27,8 +36,16 @@ export default function ContactForm() {
 				company: company,
 				description: description,
 			});
+			updateSubmit({
+				loading: false,
+				result: "success",
+			});
 			console.log("Document written with ID: ", docRef.id);
 		} catch (e) {
+			updateSubmit({
+				loading: false,
+				result: "error",
+			});
 			console.error("Error adding document: ", e);
 		}
 	};
@@ -78,7 +95,7 @@ export default function ContactForm() {
 
 			<div className="form-input-container textarea">
 				<textarea
-				className="form-input"
+					className="form-input"
 					value={formData.description}
 					name="description"
 					onChange={(e) => handleChange(e)}
@@ -90,10 +107,27 @@ export default function ContactForm() {
 			</div>
 
 			<div>
-				<CustomeButton cName="contained" type="submit">
+				<CustomeButton cName="contained contact-form-submit" type="submit">
 					{" "}
 					Send{" "}
 				</CustomeButton>
+			</div>
+
+			<div className="result">
+				{submit.loading ? <div className="loader"></div> : null}
+				{submit.result == "success" ? (
+					<p>
+						<span className="success">&#10004;</span> we received your message
+						successfully.
+					</p>
+				) : null}
+
+				{submit.result == "failed" ? (
+					<p>
+						<span className="error">&#9888;</span> sorry something happened so
+						we couldn't receive your message, please try again
+					</p>
+				) : null}
 			</div>
 		</form>
 	);
