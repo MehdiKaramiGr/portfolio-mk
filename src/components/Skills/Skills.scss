@@ -10,6 +10,7 @@
 		margin-block: 10rem;
         text-align: center;
         font-size: var(--d-2);
+        padding-inline:0.6rem ;
         h2{
             padding-block-end: .1em;
 
@@ -41,7 +42,8 @@
         //flex-basis: 33%;
 
         .card{
-            min-width: 313px;
+            width: clamp(3rem , 25vw , 21.5rem);
+            padding-block-end: 1.6rem;
             h3{
                 font-weight: 440;
                 font-size: var(--d-0);

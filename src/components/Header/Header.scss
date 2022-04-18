@@ -1,5 +1,4 @@
 .home-landing {
-
 	height: min(100vh, 1080px);
 
 	text-align: center;
@@ -7,7 +6,7 @@
 	background-image: url(../../assets/IMG_0070.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center ;
+	background-position: center;
 	background-attachment: fixed;
 
 	.header-banner {
@@ -24,6 +23,30 @@
 		h3 {
 			font-weight: 300;
 			font-size: var(--d-0);
+		}
+		hr {
+			margin-block-start: 2.5rem;
+			width: clamp(10rem , 60vw ,33rem)
+		}
+		.social-icons {
+			margin-inline: auto;
+			display: flex;
+			justify-content: center;
+			gap:1rem ;
+
+			max-width: 36rem;
+			.social-logo {
+				fill: var(--on-surface);
+				width: 3rem;
+				transition: all 0.1s ease;
+				&:hover{
+					filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+					transform: scale(1.15);
+					
+				}
+				
+				
+			}
 		}
 	}
 }

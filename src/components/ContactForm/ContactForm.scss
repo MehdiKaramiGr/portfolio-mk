@@ -12,9 +12,16 @@ textarea {
 	height: 8rem;
 }
 
+form{
+	width: clamp(10rem , 70vw, 30rem) ;
+}
+
 .contact-form-submit {
-	width: 30rem;
+
+	width: 100%;
 	height: 3rem;
+	
+
 }
 
 .result {
