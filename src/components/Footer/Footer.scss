@@ -1,0 +1,35 @@
+#footer{
+    padding-block: 1.8rem;
+    height: 5rem;
+    width: 100vw;
+    background-color: var(--surface-dp01);
+
+    text-align: center;
+    p{
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+
+    .footer-social-icons{
+			margin-inline: auto;
+			display: flex;
+			justify-content: center;
+			gap:1rem ;
+
+			max-width: 30rem;
+			.footer-social-logo {
+				fill: var(--on-surface);
+                opacity: 0.8;
+				width: 2.5rem;
+				transition: all 0.1s ease;
+				&:hover{
+                    opacity: 1;
+					filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+					transform: scale(1.15);
+				}
+				
+				
+			}
+		}
+    
+}

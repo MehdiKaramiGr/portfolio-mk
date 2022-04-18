@@ -6,13 +6,14 @@ import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Hire from "./components/Hire/Hire";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	const headerRef = useRef();
 	const ProjectsRef = useRef();
 	const skillsRef = useRef();
 	const hireRef = useRef()
-	const footerRef = useRef
+	const footerRef = useRef()
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
@@ -29,6 +30,7 @@ function App() {
 			<Projects propRef={ProjectsRef} />
 			<Skills propRef={skillsRef} />
 			<Hire propRef={hireRef} />
+			<Footer propRef={footerRef}/>
 		</div>
 	);
 }
