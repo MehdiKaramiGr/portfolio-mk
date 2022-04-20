@@ -5,12 +5,12 @@ import photoshot from '../../assets/IMG_80293.JPG'
 import Card from "../Card/Card";
 import CustomeButton from "../CustomeButton/CustomeButton";
 
-import "./Skills.scss";
+import "./About.scss";
 
-export default function Skills({ propRef }) {
+export default function About({ propRef }) {
 	return (
-		<div className="skills" id="Skills" ref={propRef}>
-			<div className="skills-banner">
+		<div id="About" ref={propRef}>
+			<div className="about-banner">
 				<h2>About Me</h2>
 
 

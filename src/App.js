@@ -4,21 +4,21 @@ import { useRef } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skills/Skills";
+import About from "./components/About/About";
 import Hire from "./components/Hire/Hire";
 import Footer from "./components/Footer/Footer";
 
 function App() {
 	const headerRef = useRef();
 	const ProjectsRef = useRef();
-	const skillsRef = useRef();
+	const aboutRef = useRef();
 	const hireRef = useRef()
 	const footerRef = useRef()
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
 		{ section: "Projects", ref: ProjectsRef },
-		{ section: "Skills", ref: skillsRef },
+		{ section: "About", ref: aboutRef },
 		{ section: "Hire", ref: hireRef },
 		{Selection:"footer" , ref: footerRef}
 	];
@@ -27,7 +27,7 @@ function App() {
 		<div className="App">
 			<NavBar navHeaderRefs={navHeaderRefs} />
 			<Header propRef={headerRef} />
-			<Skills propRef={skillsRef} />
+			<About propRef={aboutRef} />
 			<Projects propRef={ProjectsRef} />
 			<Hire propRef={hireRef} />
 			<Footer propRef={footerRef}/>

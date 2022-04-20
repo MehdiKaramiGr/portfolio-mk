@@ -52,7 +52,8 @@ const NavBar = (props) => {
 			if (scrollPosition > heightToHideLogo) {
 				logoVisibility && setLogoVisibility(false);
 			} else {
-				setLogoVisibility(true);}
+				setLogoVisibility(true);
+			}
 		};
 
 		window.addEventListener("scroll", () => {
@@ -64,8 +65,6 @@ const NavBar = (props) => {
 			});
 	}, [visibleSection, logoVisibility]);
 
-
-
 	const handleClick = (e) => {
 		setNavBarToggle(!navBarToggle);
 	};
@@ -73,7 +72,7 @@ const NavBar = (props) => {
 	//hidding styles
 	const transformedStyle = { transform: "translateX(0%)" };
 	const hiddenLogoStyle = { transform: "translateX(-200%)" };
-	
+
 	return (
 		<header className="NavBar" ref={navRef}>
 			<Logo style={logoVisibility ? null : hiddenLogoStyle} />
@@ -102,9 +101,12 @@ const NavBar = (props) => {
 						</a>
 					</li>
 					<li>
-						<a href="#Skills" className={`nav-link ${
-								visibleSection === "Skills" ? "active" : ""
-							}`}>
+						<a
+							href="#Skills"
+							className={`nav-link ${
+								visibleSection === "About" ? "active" : ""
+							}`}
+						>
 							<span aria-hidden="true">01</span>About Me
 						</a>
 					</li>
@@ -119,9 +121,12 @@ const NavBar = (props) => {
 						</a>
 					</li>
 					<li>
-						<a href="#Hire" className={`nav-link ${
+						<a
+							href="#Hire"
+							className={`nav-link ${
 								visibleSection === "Hire" ? "active" : ""
-							}`}>
+							}`}
+						>
 							<span aria-hidden="true">03</span>Hire Me
 						</a>
 					</li>
