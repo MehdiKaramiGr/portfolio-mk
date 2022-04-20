@@ -6,15 +6,14 @@ import GitLogo from "../../assets/git-logo";
 
 import "./ProjectCard.scss";
 
-export default function ProjectCard(props) {
+export default function ProjectCard({ title ,ImgUrl , description}) {
 	return (
 		<div className="project-card">
-			<img src={props.ImgUrl}></img>
+			<img src={ImgUrl}></img>
+			<h4>{title}</h4>
 			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-				perferendis, fugiat non earum eius incidunt ipsam, minus nemo natus
-				minima dolore? Perspiciatis laudantium nulla commodi quam, autem atque
-				minima laboriosam?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit necessitatibus sequi assumenda nihil voluptates. Neque, maxime eum! Iure, nam nesciunt.
+				{description}
 			</p>
 			<div className="redirectButtons">
 				<CustomeButton cName="contained">

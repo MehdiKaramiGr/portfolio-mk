@@ -102,20 +102,20 @@ const NavBar = (props) => {
 						</a>
 					</li>
 					<li>
+						<a href="#Skills" className={`nav-link ${
+								visibleSection === "Skills" ? "active" : ""
+							}`}>
+							<span aria-hidden="true">01</span>About Me
+						</a>
+					</li>
+					<li>
 						<a
 							href="#Projects"
 							className={`nav-link ${
 								visibleSection === "Projects" ? "active" : ""
 							}`}
 						>
-							<span aria-hidden="true">01</span>Past Works
-						</a>
-					</li>
-					<li>
-						<a href="#Skills" className={`nav-link ${
-								visibleSection === "Skills" ? "active" : ""
-							}`}>
-							<span aria-hidden="true">02</span>Skills
+							<span aria-hidden="true">02</span>Past Works
 						</a>
 					</li>
 					<li>

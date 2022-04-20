@@ -1,11 +1,9 @@
 :root {
-
 	--primary--dp02: hsl(267, 95%, 56%);
 	--primary--dp01: hsl(267, 95%, 66%);
 	--primary--dp005: hsl(267, 95%, 69%);
 	--primary: #bb86fc;
 	--primary-dp01: hsl(267, 95%, 86%);
-
 
 	--primary-variant: #3700b3;
 	--secondary: #03dac6;
@@ -14,7 +12,6 @@
 	--surface: hsl(0, 0%, 7%);
 	--surface-dp01: hsl(0, 0%, 9%);
 	--surface-dp02: hsl(0, 0%, 11%);
-
 
 	--error: hsl(349, 82%, 61%);
 	--on-primary: #000000;
@@ -25,8 +22,6 @@
 
 	--primary-rgb: 188, 136, 252;
 	--secondary-rgb: 3, 218, 198;
-
-
 
 	--d--2: clamp(1rem, calc(0.78rem + 0.31vw), 0.84rem);
 	--d--1: clamp(1.25rem, calc(0.97rem + 0.39vw), 1.05rem);
@@ -61,39 +56,20 @@
 	--sp-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3rem);
 }
 
-// @media (max-width: 570px) {
-// 	:root {
-// 		font-size: 16px;
-// 	}
-// }
-
-// @media (min-width: 570px) and (max-width: 880px) {
-// 	:root {
-// 		font-size: 16px;
-// 	}
-// }
-
-// @media (min-width: 880px) {
-// 	:root {
-// 		font-size: 18px;
-// 	}
-// }
-
 body {
+	
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+
+	font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--on-background);
+	background-color: var(--background);
 	overflow-x: hidden;
 }
 
 html {
 	scroll-behavior: smooth;
-}
-
-body {
-	background-color: var(--background);
 }

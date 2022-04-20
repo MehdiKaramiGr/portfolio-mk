@@ -4,61 +4,92 @@
 	align-items: center;
 	min-height: 100vh;
 
-	background-color: var(--surface-dp01);
-    
-	.skills-banner {
-		margin-block: 10rem;
-        text-align: center;
-        font-size: var(--d-2);
-        padding-inline:0.6rem ;
-        h2{
-            padding-block-end: .1em;
+	background-color: var(--surface);
+	.bio-banner {
+		padding-block-start: 4rem;
+		padding-block-end: 3rem;
 
-            margin-block-end: .1em;
-        }
-        h4{
-        font-size: var(--d-0);
-        }
-        p{
-        font-size: var(--d--1);
+		width: 100%;
 
-        }
+		display: flex;
+
+		align-items: center;
+
+		@media (max-width: 1350px) {
+			display: block;
+		}
+
+		.bio {
+			padding-inline: 6rem;
+			font-weight: 350;
+			font-size: var(--d-0);
+		}
+		#photoshot {
+			
+			
+			border-radius: 5px ;
+			box-shadow: 11px 10px 13px -9px hsla(0, 0%, 4%, 1);
+
+			width: clamp(20rem, 55vw, 40rem);
+			aspect-ratio: 3/2;
+
+			//padding-block-start: 2rem;
+
+			
+		}
 	}
-    
+	.skills-banner {
+		margin-block-start: 10rem;
+		margin-block-end: 5rem;
+		text-align: center;
+		font-size: var(--d-2);
+		padding-inline: 0rem;
 
+		h2 {
+			padding-block-end: 0.1em;
+
+			margin-block-end: 0.1em;
+		}
+
+		p {
+			font-size: var(--d--1);
+		}
+	}
+
+	h4 {
+		font-size: var(--d-0);
+		padding-inline: 1rem;
+		padding-block-end: 4rem;
+		text-align: center;
+	}
 	.skills-card-container {
-        padding-inline: 1rem;
+		padding-inline: 1rem;
 
-        padding-block-end: 5rem;
+		padding-block-end: 5rem;
 
-        display: flex;
-        gap:2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        //align-items: flex-start;
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		//align-items: flex-start;
 
+		//flex-basis: 33%;
 
-
-        //flex-basis: 33%;
-
-        .card{
-            width: clamp(3rem , 25vw , 21.5rem);
-            padding-block-end: 1.6rem;
-            h3{
-                font-weight: 440;
-                font-size: var(--d-0);
-            }
-            ul{
-                
-                padding-inline: 1rem;
-            }
-            li{
-                list-style:none ;
-                font-size: var(--d--1);
-                font-weight: 350;
-            }
-        }
-
-
+		.card {
+			width: clamp(3rem, 25vw, 21.5rem);
+			padding-block-end: 1.6rem;
+			h3 {
+				font-weight: 440;
+				font-size: var(--d-0);
+			}
+			ul {
+				padding-inline: 1rem;
+			}
+			li {
+				list-style: none;
+				font-size: var(--d--1);
+				font-weight: 350;
+			}
+		}
 	}
 }

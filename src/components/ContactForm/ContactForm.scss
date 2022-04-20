@@ -3,25 +3,20 @@ select,
 textarea {
 	font-family: inherit;
 	font-size: 100%;
-}
-textarea {
 	resize: none;
+}
+
+form {
+	width: clamp(10rem, 70vw, 30rem);
 }
 
 .form-input-container.textarea {
 	height: 8rem;
 }
 
-form{
-	width: clamp(10rem , 70vw, 30rem) ;
-}
-
 .contact-form-submit {
-
 	width: 100%;
 	height: 3rem;
-	
-
 }
 
 .result {
@@ -45,7 +40,6 @@ form{
 	}
 }
 
-/* From uiverse.io by @satyamchaudharydev */
 .loader {
 	margin-block: 1rem;
 	--height-of-loader: 4px;

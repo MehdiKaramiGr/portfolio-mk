@@ -4,9 +4,9 @@ import { db } from "../../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 import CustomeButton from "../CustomeButton/CustomeButton";
+import FormInput from "../FormInput/FormInput";
 
 import "./ContactForm.scss";
-import FormInput from "../FormInput.jsx/FormInput";
 
 const FORM_ENDPOINT = "";
 export default function ContactForm() {
@@ -15,6 +15,7 @@ export default function ContactForm() {
 		email: "",
 		company: "",
 		description: "",
+		location: {},
 	});
 
 	const [submit, updateSubmit] = useState({
@@ -24,6 +25,8 @@ export default function ContactForm() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		const response = await fetch("https://ipapi.co/json");
+		const location = await response.json();
 		updateSubmit({
 			loading: true,
 			result: "",
@@ -35,6 +38,7 @@ export default function ContactForm() {
 				emailAddress: email,
 				company: company,
 				description: description,
+				location: location,
 			});
 			updateSubmit({
 				loading: false,

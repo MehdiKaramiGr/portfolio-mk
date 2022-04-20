@@ -26,26 +26,23 @@
 		}
 		hr {
 			margin-block-start: 2.5rem;
-			width: clamp(10rem , 60vw ,33rem)
+			width: clamp(10rem, 60vw, 33rem);
 		}
 		.social-icons {
 			margin-inline: auto;
 			display: flex;
 			justify-content: center;
-			gap:1rem ;
+			gap: 1rem;
 
 			max-width: 36rem;
 			.social-logo {
 				fill: var(--on-surface);
 				width: 3rem;
 				transition: all 0.1s ease;
-				&:hover{
+				&:hover {
 					filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 					transform: scale(1.15);
-					
 				}
-				
-				
 			}
 		}
 	}

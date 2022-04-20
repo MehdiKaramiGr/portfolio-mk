@@ -1,6 +1,4 @@
-
-.btn {
-	
+.btn {	
 	display: inline-flex;
 	vertical-align: middle;
 	align-items: center;
@@ -14,18 +12,17 @@
 	
 	box-sizing: border-box;
 	
-	min-width: 64px;
-	
 	padding-block: 0.4rem;
 	padding-inline: 0.9rem;
+	
+	min-width: 64px;
 	
 	border: 1px solid;
 	border-radius: 0.25rem;
 	border-color: transparent;
+	
 	background-color: transparent;
-	
 	color: var(--primary);
-	
 	
 	font-weight: 650;
 	font-size: 0.9375rem;
@@ -34,39 +31,29 @@
 	letter-spacing: 0;
 	
 	text-transform: uppercase;
-	
 	user-select: none;
-	
 	text-rendering: auto;
-
+	
 	transition: font-size 0.2s;
-
-
 	a{
 		text-decoration: none;
 		color: var(--primary);
-
-		
 	}
-	
+
 	&.hover:hover {
 		font-size: 1em;
 		//transform: scale(1.1);
 		cursor: pointer;
 	}
 	
-	span.ripple {
-		
-		position: absolute; /* The absolute position we mentioned earlier */
-		// z-index: 2;
+	span.ripple {	
+		position: absolute;
 		border-radius: 50%;
 		transform: scale(0);
 		animation: ripple 600ms linear;
 		background-color: var(--primary-dp01);
 		opacity: 0.5;
 	}
-
-
 
 	&.larg {
 		font-size: 1rem;
@@ -100,7 +87,9 @@
 		outline: 0;
 		border: 0;
 		
-		//box-shadow: 0 1 0.5rem rgba(256, 256, 256, 0.3);
+		box-shadow: 11px 10px 13px -9px hsla(0, 0%, 4%, 1);
+
+		// box-shadow: 0 1 0.5rem rgba(256, 256, 256, 0.3);
 		cursor: pointer;
 		&:hover {
 			background-color: var(--primary--dp005);
@@ -109,7 +98,6 @@
 		span.ripple {
 			
 			position: absolute; /* The absolute position we mentioned earlier */
-			// z-index: 2;
 			border-radius: 50%;
 			transform: scale(0);
 			animation: ripple 600ms linear;
@@ -118,9 +106,10 @@
 		}
 	}
 	&.outlined{
+
+		filter: drop-shadow(11px 10px 13px rgb(0 0 0 / 0.9));
 		
 		border-color: var(--primary);
-		// background-color: var(--primary) ;
 		color:var(--primary);
 		cursor: pointer;
 		&:hover {
@@ -128,27 +117,20 @@
 		}
 
 		span.ripple {
-	
-			position: absolute; /* The absolute position we mentioned earlier */
-			// z-index: 2;
+			position: absolute;
 			border-radius: 50%;
 			transform: scale(0);
 			animation: ripple 600ms linear;
 			background-color: var(--primary-dp01);
 			opacity: 0.2;
 		}
-		
 		@keyframes ripple {
 			to {
 				transform: scale(4);
 				opacity: 0;
 			}
 		}
-		
 	}
-
-	
-
 }
 
 

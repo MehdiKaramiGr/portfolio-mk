@@ -1,13 +1,14 @@
 #Projects {
 	//height: 10em;
-	max-width: 81vw;
+	width: 100%;
 	text-align: center;
-	padding-inline: var(--sp-3xs);
+	//padding-inline: var(--sp-3xl);
 	padding-block-end: var(--sp-3xl);
 	//padding-block: var(--sp-xl-2xl);
-	margin-inline: auto;
+	// margin-inline: auto;
+	
 	font-size: 30px;
-	background-color: var(--background);
+	background-color: var(--surface-dp01);
 
 	.projects-banner{
 		padding-block-start: 4.2em;
@@ -30,12 +31,14 @@
 	}
 
 	.projects-card-container {
+		padding-inline: clamp(1rem,10vw,8rem);
 		display: grid;
 		gap: 1.7rem;
 		grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 	}
 	@media (max-width: 420px) {
 		.projects-card-container {
+			padding-inline: 1.5rem;
 			display: block;
 			.project-card {
 				margin-block-end: 1.5rem;

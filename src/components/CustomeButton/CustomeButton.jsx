@@ -39,7 +39,9 @@ export default function CustomeButton({
 			setClicked(false);
 			clearInterval(timer1);
 		}, 605);
-		
+		if (url) {
+			window.open(url, "_blank");
+		}
 	};
 
 	//useEffect(() => {}, [rippleStyle]);

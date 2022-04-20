@@ -27,8 +27,8 @@ function App() {
 		<div className="App">
 			<NavBar navHeaderRefs={navHeaderRefs} />
 			<Header propRef={headerRef} />
-			<Projects propRef={ProjectsRef} />
 			<Skills propRef={skillsRef} />
+			<Projects propRef={ProjectsRef} />
 			<Hire propRef={hireRef} />
 			<Footer propRef={footerRef}/>
 		</div>

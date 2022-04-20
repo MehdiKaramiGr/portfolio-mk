@@ -16,9 +16,19 @@
         width: 100%;
     }
     h4 {
-        margin-block: var(--sp-l);
+        padding-inline-start: 0.6rem;
+        padding-block-end: 0.1rem;
+        margin-block-start: 1rem;
+        margin-block-end: 0rem;
+        
+        font-weight: 500;
+        font-size: 1.9rem;
+
+
+        text-align: left;
     }
     p {
+        margin-block-start: 0.1rem;
         font-size: var(--d--2);
     }
 
