@@ -23,22 +23,24 @@ export default function CustomeButton({
 	};
 
 	const handleClick = (e) => {
-		const { diameter, rippleTop, rippleLeft } = createRippleDim(
-			btnRef.current,
-			e
-		);
-		setRippleStyle({
-			width: `${diameter}px`,
-			height: `${diameter}px`,
-			left: `${rippleLeft}px`,
-			top: `${rippleTop}px`,
-		});
+		if (!e.target.className.includes("disabled")) {
+			const { diameter, rippleTop, rippleLeft } = createRippleDim(
+				btnRef.current,
+				e
+			);
+			setRippleStyle({
+				width: `${diameter}px`,
+				height: `${diameter}px`,
+				left: `${rippleLeft}px`,
+				top: `${rippleTop}px`,
+			});
 
-		setClicked(true);
-		let timer1 = setTimeout(() => {
-			setClicked(false);
-			clearInterval(timer1);
-		}, 605);
+			setClicked(true);
+			let timer1 = setTimeout(() => {
+				setClicked(false);
+				clearInterval(timer1);
+			}, 605);
+		}
 		if (url) {
 			window.open(url, "_blank");
 		}

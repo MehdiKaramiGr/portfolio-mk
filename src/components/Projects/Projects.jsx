@@ -4,10 +4,10 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 
 import "./Projects.scss";
 
-import PAST_WORKS_DATA from "./past-work.data";
+import data from '../../assets/data.json';
 
 export default function Projects(props) {
-	const [collection, setCollection] = useState(PAST_WORKS_DATA);
+	const [collection, setCollection] = useState(data["past-work-data"]);
 
 	return (
 		<div id="Projects" ref={props.propRef}>

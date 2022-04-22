@@ -1,27 +1,30 @@
 :root {
-	--primary--dp02: hsl(267, 95%, 56%);
-	--primary--dp01: hsl(267, 95%, 66%);
-	--primary--dp005: hsl(267, 95%, 69%);
-	--primary: #bb86fc;
-	--primary-dp01: hsl(267, 95%, 86%);
 
-	--primary-variant: #3700b3;
-	--secondary: #03dac6;
-	--background: #121212;
+		--primary--dp02: hsl(267, 95%, 56%);
+		--primary--dp01: hsl(267, 95%, 66%);
+		--primary--dp005: hsl(267, 95%, 69%);
+		--primary: hsl(267, 95%, 76%);
+		--primary-dp01: hsl(267, 95%, 86%);
 
-	--surface: hsl(0, 0%, 7%);
-	--surface-dp01: hsl(0, 0%, 9%);
-	--surface-dp02: hsl(0, 0%, 11%);
+		--primary-variant: #3700b3;
+		--secondary: #03dac6;
+		--background: #121212;
 
-	--error: hsl(349, 82%, 61%);
-	--on-primary: #000000;
-	--on-secondary: #000000;
-	--on-background: #ffffff;
-	--on-surface: #ffffff;
-	--on-error: #000000;
+		--surface: hsl(0, 0%, 7%);
+		--surface-dp01: hsl(0, 0%, 9%);
+		--surface-dp02: hsl(0, 0%, 11%);
 
-	--primary-rgb: 188, 136, 252;
-	--secondary-rgb: 3, 218, 198;
+		--error: hsl(349, 82%, 61%);
+		--on-primary: #000000;
+		--on-secondary: #000000;
+		--on-background: #ffffff;
+		--on-surface: #ffffff;
+		--on-error: #000000;
+
+		--primary-rgb: 188, 136, 252;
+		--secondary-rgb: 3, 218, 198;
+	
+
 
 	--d--2: clamp(1rem, calc(0.78rem + 0.31vw), 0.84rem);
 	--d--1: clamp(1.25rem, calc(0.97rem + 0.39vw), 1.05rem);
@@ -57,10 +60,9 @@
 }
 
 body {
-	
 	margin: 0;
 
-	font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
 	-webkit-font-smoothing: antialiased;

@@ -15,7 +15,7 @@
 }
 #primary-navigation {
 	display: flex;
-	gap: 2em;
+	gap: 1.6em;
 	padding: 0;
 	margin: 0;
 	background: hsl(0 0% 0% / 0.75);
@@ -109,7 +109,7 @@
 
 @media (min-width: 35.625em) {
 	#primary-navigation {
-		gap: clamp(1.5rem, 5vw, 3rem);
+		gap: clamp(1.5rem, 4vw, 3rem);
 		padding-block: 2rem;
 		padding-inline: clamp(2rem, 5vw, 10rem);
 	}

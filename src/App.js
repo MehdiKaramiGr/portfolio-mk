@@ -12,15 +12,15 @@ function App() {
 	const headerRef = useRef();
 	const ProjectsRef = useRef();
 	const aboutRef = useRef();
-	const hireRef = useRef()
-	const footerRef = useRef()
+	const hireRef = useRef();
+	const footerRef = useRef();
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
 		{ section: "Projects", ref: ProjectsRef },
 		{ section: "About", ref: aboutRef },
 		{ section: "Hire", ref: hireRef },
-		{Selection:"footer" , ref: footerRef}
+		{ Selection: "footer", ref: footerRef },
 	];
 
 	return (
@@ -30,7 +30,7 @@ function App() {
 			<About propRef={aboutRef} />
 			<Projects propRef={ProjectsRef} />
 			<Hire propRef={hireRef} />
-			<Footer propRef={footerRef}/>
+			<Footer propRef={footerRef} />
 		</div>
 	);
 }

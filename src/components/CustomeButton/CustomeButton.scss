@@ -75,13 +75,14 @@
 	
 	.startIcon {
 		color: #b2bac2;
+		fill:var(--on-primary);
 		padding-inline-end: 0.3rem;
 		width: 1.5em;
 		min-width: 24px;
 	}
 	
 	&.contained {
-		color: var(--surface-dp01);
+		color: var(--on-primary);
 		background-color: var(--primary);
 		
 		outline: 0;
@@ -104,6 +105,10 @@
 			background-color: var(--primary-dp01);
 			opacity: 0.5;
 		}
+	}
+	&.disabled{
+		color:hsl(0, 0%, 40%);
+		border:1px solid hsl(0, 0%, 40%);
 	}
 	&.outlined{
 

@@ -102,7 +102,7 @@ const NavBar = (props) => {
 					</li>
 					<li>
 						<a
-							href="#Skills"
+							href="#About"
 							className={`nav-link ${
 								visibleSection === "About" ? "active" : ""
 							}`}

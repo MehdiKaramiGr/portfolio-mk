@@ -3,6 +3,10 @@
 
 	text-align: center;
 
+	@media (prefers-color-scheme: light) {
+		background-image: url(../../assets/IMG_0076.jpg);
+	}
+
 	background-image: url(../../assets/IMG_0070.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -13,7 +17,7 @@
 		margin: 0 auto;
 		max-width: 980px;
 		text-align: center;
-		padding-inline: (var(--sp-m));
+		padding-inline: (var(--sp-l));
 		padding-block: calc(var(--sp-2xl-3xl) + 2rem);
 
 		h1 {
