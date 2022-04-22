@@ -15,8 +15,8 @@ export default function ProjectCard({ title ,ImgUrl , description , gitUrl , liv
 				{description}
 			</p>
 			<div className="redirectButtons">
-				<CustomeButton cName="contained">
-					<GitLogo styleClass="startIcon" url={gitUrl} />
+				<CustomeButton cName="contained" url={gitUrl} >
+					<GitLogo styleClass="startIcon" />
 					GitHub
 				</CustomeButton>
 
