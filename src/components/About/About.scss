@@ -21,6 +21,10 @@
 
 		.bio {
 			padding-inline: 6rem;
+			@media(max-width:688px){
+			padding-inline: clamp(1rem , 10vw , 3.5rem);
+
+			}
 			font-weight: 350;
 			font-size: var(--d-0);
 		}

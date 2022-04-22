@@ -103,7 +103,7 @@ export default function ContactForm() {
 					value={formData.description}
 					name="description"
 					onChange={(e) => handleChange(e)}
-					required
+					
 				/>
 				<label className="form-input-label" htmlFor="description">
 					<span className="label-name">Tell Me All About It</span>

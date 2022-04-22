@@ -9,7 +9,7 @@ import "./ProjectCard.scss";
 export default function ProjectCard({ title ,ImgUrl , description , gitUrl , liveUrl=""}) {
 	return (
 		<div className="project-card">
-			<img src={ImgUrl}></img>
+			<img loading="lazy" src={ImgUrl}></img>
 			<h4>{title}</h4>
 			<p>
 				{description}

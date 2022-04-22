@@ -32,7 +32,7 @@ export default function About({ propRef }) {
 						must-have skill for a web developer, I'm skillful with adobe
 						photoshop, illustrator and xd
 					</p>
-					<img src={photoshot} id="photoshot" />
+					<img loading="lazy" src={photoshot} id="photoshot" />
 				</div>
 
 				<p>You can also download my resume from the link below</p>
