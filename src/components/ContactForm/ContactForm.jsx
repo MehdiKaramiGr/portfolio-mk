@@ -62,7 +62,6 @@ export default function ContactForm() {
 			if (!e.target.className.includes("filled")) {
 				e.target.className += " filled";
 			}
-			console.log(e.target.value);
 		} else {
 			e.target.className = e.target.className.replace("filled", "");
 		}
@@ -103,7 +102,6 @@ export default function ContactForm() {
 					value={formData.description}
 					name="description"
 					onChange={(e) => handleChange(e)}
-					
 				/>
 				<label className="form-input-label" htmlFor="description">
 					<span className="label-name">Tell Me All About It</span>

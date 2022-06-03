@@ -23,6 +23,7 @@ export default function CustomeButton({
 	};
 
 	const handleClick = (e) => {
+		console.log(url)
 		if (!e.target.className.includes("disabled")) {
 			const { diameter, rippleTop, rippleLeft } = createRippleDim(
 				btnRef.current,
@@ -42,6 +43,7 @@ export default function CustomeButton({
 			}, 605);
 		}
 		if (url) {
+			console.log("if (url)" , (url) )
 			window.open(url, "_blank");
 		}
 	};
