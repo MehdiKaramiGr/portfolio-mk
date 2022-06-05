@@ -1,7 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useRef } from "react";
 
-import { db } from "../../firebase/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import emailjs from "@emailjs/browser";
 
 import CustomeButton from "../CustomeButton/CustomeButton";
 import FormInput from "../FormInput/FormInput";
@@ -10,12 +9,13 @@ import "./ContactForm.scss";
 
 const FORM_ENDPOINT = "";
 export default function ContactForm() {
+	const formRef = useRef();
+
 	const [formData, updateFormData] = useState({
 		name: "",
 		email: "",
 		company: "",
 		description: "",
-		location: {},
 	});
 
 	const [submit, updateSubmit] = useState({
@@ -31,25 +31,33 @@ export default function ContactForm() {
 			loading: true,
 			result: "",
 		});
+
 		try {
-			const { name, email, company, description } = formData;
-			const docRef = await addDoc(collection(db, "submitForm"), {
-				name: name,
-				emailAddress: email,
-				company: company,
-				description: description,
-				location: location,
-			});
-			updateSubmit({
-				loading: false,
-				result: "success",
-			});
-			console.log("Document written with ID: ", docRef.id);
+			const sendData = { ...formData, location: JSON.stringify(location) };
+			emailjs
+				.send(
+					process.env.REACT_APP_EMAILJS_SERVICE_ID,
+					process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+					sendData,
+					process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+				)
+				.then(
+					(result) => {
+						updateSubmit({
+							loading: false,
+							result: "success",
+						});
+						console.log(result.text);
+					},
+					(error) => {
+						updateSubmit({
+							loading: false,
+							result: "error",
+						});
+						console.log(error.text);
+					}
+				);
 		} catch (e) {
-			updateSubmit({
-				loading: false,
-				result: "error",
-			});
 			console.error("Error adding document: ", e);
 		}
 	};
@@ -68,7 +76,7 @@ export default function ContactForm() {
 	};
 
 	return (
-		<form action={FORM_ENDPOINT} onSubmit={handleSubmit}>
+		<form ref={formRef} action={FORM_ENDPOINT} onSubmit={handleSubmit}>
 			<FormInput
 				label="Name"
 				type="text"
@@ -90,7 +98,7 @@ export default function ContactForm() {
 
 			<FormInput
 				type="text"
-				value={formData.Company}
+				value={formData.company}
 				label="company"
 				onChange={(e) => handleChange(e)}
 				name="company"
