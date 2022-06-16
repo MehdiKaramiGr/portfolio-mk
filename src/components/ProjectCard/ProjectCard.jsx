@@ -20,7 +20,7 @@ export default function ProjectCard({ title ,ImgUrl , description , gitUrl , liv
 					GitHub
 				</CustomeButton>
 
-				<CustomeButton cName={`${liveUrl ? "outlined":"disabled"}`} >
+				<CustomeButton cName={`${liveUrl ? "outlined":"disabled"}`} url={liveUrl} >
 					Live Demo
 				</CustomeButton>
 			</div>
