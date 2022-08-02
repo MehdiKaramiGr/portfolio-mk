@@ -122,12 +122,12 @@ const NavBar = (props) => {
 					</li>
 					<li>
 						<a
-							href="#Hire"
+							href="#Contact"
 							className={`nav-link ${
-								visibleSection === "Hire" ? "active" : ""
+								visibleSection === "Contact" ? "active" : ""
 							}`}
 						>
-							<span aria-hidden="true">03</span>Hire Me
+							<span aria-hidden="true">03</span>Contact Me
 						</a>
 					</li>
 				</ul>

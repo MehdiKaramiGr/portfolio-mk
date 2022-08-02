@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useRef } from "react";
 
 import emailjs from "@emailjs/browser";
 
@@ -125,14 +125,14 @@ export default function ContactForm() {
 
 			<div className="result">
 				{submit.loading ? <div className="loader"></div> : null}
-				{submit.result == "success" ? (
+				{submit.result === "success" ? (
 					<p>
 						<span className="success">&#10004;</span> we received your message
 						successfully.
 					</p>
 				) : null}
 
-				{submit.result == "failed" ? (
+				{submit.result === "failed" ? (
 					<p>
 						<span className="error">&#9888;</span> sorry something happened so
 						we couldn't receive your message, please try again

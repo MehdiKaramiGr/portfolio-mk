@@ -1,4 +1,9 @@
 .home-landing {
+
+	display: flex;
+	align-items: center;
+
+
 	height: min(100vh, 1080px);
 
 	text-align: center;
@@ -10,6 +15,10 @@
 	background-attachment: fixed;
 
 	.header-banner {
+
+		
+		
+
 		margin: 0 auto;
 		max-width: 980px;
 		text-align: center;

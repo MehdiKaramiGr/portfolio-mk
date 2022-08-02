@@ -1,10 +1,10 @@
 import React from 'react'
 
-import './Card.scss'
+import './SkillCard.scss'
 
 export default function SkillCard({children}) {
   return (
-    <div className='card'>
+    <div className='skill-card'>
        {children}
     </div>
   )

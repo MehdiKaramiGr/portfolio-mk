@@ -2,17 +2,16 @@ import React from "react";
 import ContactForm from "../ContactForm/ContactForm";
 import CustomeButton from "../CustomeButton/CustomeButton";
 
-import "./Hire.scss";
+import "./Contact.scss";
 
-export default function Hire({ propRef }) {
+export default function Contact({ propRef }) {
 	return (
-		<div id="Hire" ref={propRef}>
-			<div className="hire-banner">
-				<h2>Hire Me</h2>
+		<div id="Contact" ref={propRef}>
+			<div className="contact-banner">
+				<h2>Open to offers</h2>
 				<p>
-					If I'm a good fit for your business or company, you can contact me
-					from one of the options below or fill up the below form, and I'll
-					contact you as soon as possible{" "}
+					Should you have any inquiries about my working condition or contracts
+					you may contact me as follows:
 				</p>
 				<div className="contact-info">
 					<CustomeButton cName="hover">

@@ -1,5 +1,11 @@
 .project-card {
+    position: relative;
     background-color: var(--surface-dp02);
+
+
+    display: grid;
+    align-content: space-between;
+    justify-content: center;
 
     color: var(--on-surface);
 
@@ -7,9 +13,9 @@
     box-shadow: 11px 10px 13px -9px hsla(0, 0%, 4%, 1);
 
 
-    padding-inline: var(--sp-2xs);
-    padding-block: var(--sp-2xs);
-
+    padding-inline: var(--sp-xs);
+    padding-block-start: var(--sp-2xs);
+    padding-block-end: var(--sp-s);
     //margin-inline: auto;
 
     img {
@@ -23,8 +29,8 @@
         
         font-weight: 500;
         font-size: 1.9rem;
-
-
+        
+        
         text-align: left;
     }
     p {
@@ -32,15 +38,15 @@
         font-size: var(--d--2);
         text-align: left;
     }
-
+    
     .redirectButtons{
         display: flex;
         flex-direction: row;
         justify-items: center;
         justify-content: center;
         align-items: stretch;
-
         
+
         //flex-shrink: 1;
         @media(max-width: 420px){
             display: flex;
@@ -51,9 +57,8 @@
                 height: 2.5rem;
             }
 
-
         }
-        gap:1em;
+        gap:.8em;
         height: var(--sp-l);
         .btn{
             min-width: 113.3px;

@@ -2,24 +2,24 @@ import "./App.scss";
 import { useRef } from "react";
 
 import NavBar from "./components/NavBar/NavBar";
-import Header from "./components/Header/Header";
-import Projects from "./components/Projects/Projects";
-import About from "./components/About/About";
-import Hire from "./components/Hire/Hire";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Section-Header/Header";
+import Projects from "./components/Section-Projects/Projects";
+import About from "./components/Section-About/About";
+import Contact from "./components/Section-Contact/Contact";
+import Footer from "./components/Section-Footer/Footer";
 
 function App() {
 	const headerRef = useRef();
 	const ProjectsRef = useRef();
 	const aboutRef = useRef();
-	const hireRef = useRef();
+	const contactRef = useRef();
 	const footerRef = useRef();
 
 	const navHeaderRefs = [
 		{ section: "Home", ref: headerRef },
 		{ section: "Projects", ref: ProjectsRef },
 		{ section: "About", ref: aboutRef },
-		{ section: "Hire", ref: hireRef },
+		{ section: "Contact", ref: contactRef },
 		{ Selection: "footer", ref: footerRef },
 	];
 
@@ -29,7 +29,7 @@ function App() {
 			<Header propRef={headerRef} />
 			<About propRef={aboutRef} />
 			<Projects propRef={ProjectsRef} />
-			<Hire propRef={hireRef} />
+			<Contact propRef={contactRef} />
 			<Footer propRef={footerRef} />
 		</div>
 	);
