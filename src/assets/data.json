@@ -3,7 +3,7 @@
 		{
 			"id": "1",
 			"ImgUrl": "https://i.postimg.cc/kDXws1ss/OORooqv.png",
-			"gitUrl": "https://github.com/MehdiKaramiGr/crown-clothing",
+			"gitUrl": "https://github.com/MehdiKaramiGr/crwn-clothing",
 			"title": "Crown Shop",
 			"liveUrl": "https://crwn-demo-mk.herokuapp.com/",
 			"description": "An e-commerce clothing website made by React by helping react-router, react-redux, scss, Firebase. users can sign in with their Google accounts with the help of Firebase Auth.  Note: this web app is not fully finished and responsive yet"
