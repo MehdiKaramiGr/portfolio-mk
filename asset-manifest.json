@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio-mk/static/css/main.3976f576.css",
-    "main.js": "/portfolio-mk/static/js/main.a71ac154.js",
+    "main.js": "/portfolio-mk/static/js/main.516e47db.js",
     "static/media/IMG_0070.jpg": "/portfolio-mk/static/media/IMG_0070.0b753348559f6753c2ca.jpg",
     "static/media/IMG_80293.JPG": "/portfolio-mk/static/media/IMG_80293.c4553e03750a19743d60.JPG",
     "static/media/mehdi-karami-cv.pdf": "/portfolio-mk/static/media/mehdi-karami-cv.7243888d040236e8fd76.pdf",
     "static/media/menu-icon.png": "/portfolio-mk/static/media/menu-icon.745580e91f9a46765063.png",
     "index.html": "/portfolio-mk/index.html",
     "main.3976f576.css.map": "/portfolio-mk/static/css/main.3976f576.css.map",
-    "main.a71ac154.js.map": "/portfolio-mk/static/js/main.a71ac154.js.map"
+    "main.516e47db.js.map": "/portfolio-mk/static/js/main.516e47db.js.map"
   },
   "entrypoints": [
     "static/css/main.3976f576.css",
-    "static/js/main.a71ac154.js"
+    "static/js/main.516e47db.js"
   ]
 }
