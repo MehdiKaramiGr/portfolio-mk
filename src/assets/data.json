@@ -2,7 +2,7 @@
 	"past-work-data": [
 		{
 			"id": "1",
-			"ImgUrl": "https://i.postimg.cc/kDXws1ss/OORooqv.png",
+			"ImgUrl": "https://i.postimg.cc/J7jg1SBf/OORooqv.png",
 			"gitUrl": "https://github.com/MehdiKaramiGr/crwn-clothing",
 			"title": "Crown Shop",
 			"liveUrl": "https://crwn-demo-mk.herokuapp.com/",
@@ -10,11 +10,19 @@
 		},
 		{
 			"id": "2",
-			"ImgUrl": "https://i.postimg.cc/t7XvfCqh/fkAqdz2.png",
+			"ImgUrl": "https://i.postimg.cc/7P7v5fjQ/fkAqdz2.png",
 			"gitUrl": "https://github.com/MehdiKaramiGr/portfolio-mk",
 			"title": "Portfolio by Mehdi Karami",
 			"liveUrl": "https://mehdikaramigr.github.io/portfolio-mk/",
 			"description": "A portfolio React App, to showcase a developer's most recent works, Curriculum vitae, and skills. With the help of emailjs people can interact with the developer via the form available in the app. "
+		},
+		{
+			"id":"3",
+			"ImgUrl":"https://i.postimg.cc/Nfs5vzWk/image.png",
+			"gitUrl":"https://github.com/MehdiKaramiGr/analog-clock",
+			"title": "Analog Clock by Mehdi Karami",
+			"liveUrl": "https://mehdikaramigr.github.io/analog-clock/",
+			"description": "A simple reusable Analog Clock React Component. A part of a series of projects belonging to an upcoming React UI Component library"
 		}
 	]
 }
